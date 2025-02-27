@@ -1,0 +1,16 @@
+name: myenv  # Conda environment name
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - flask
+  - mysql-connector-python  # MySQL database connection
+  - pandas  # Data processing
+  - fpdf  # PDF generation
+  - python-dateutil  # For date operations
+  - requests  # HTTP requests (if needed)
+  - numpy  # Numerical operations
+  - pip
+  - pip:
+      - secrets  # Secure random numbers
