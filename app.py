@@ -14,8 +14,8 @@ from dateutil.relativedelta import relativedelta  # For month difference calcula
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)  
-USERNAME = "admin"
-PASSWORD = "password"
+USERNAME = ""
+PASSWORD = ""
 
 # Database Configuration
 DB_CONFIG = {
@@ -1135,7 +1135,7 @@ def admin_deposit_login():
         username = request.form['username']
         password = request.form['password']
         
-        if username == 'ArunC' and password == 'Arun@123Chouthai':
+        if username == '' and password == '':
             session['add_admin_logged_in'] = True
             return redirect(url_for('delete_deposit'))
         else:
@@ -1150,7 +1150,7 @@ def admin_loans_login():
         username = request.form['username']
         password = request.form['password']
         
-        if username == 'ArunC' and password == 'Arun@123Chouthai':
+        if username == '' and password == '':
             session['add_loans_logged_in'] = True
             return redirect(url_for('delete_loan'))
         else:
